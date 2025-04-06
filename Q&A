@@ -1,0 +1,12 @@
+1. What was your initial thought process when you first read the problem statement, and how did you break it down into smaller, manageable parts?
+Initially, I focused on understanding the goal: identifying nearby properties within a 50 km radius of a user-entered location. I broke it down into key steps — handling fuzzy location input, geocoding the location, calculating distances using coordinates, and filtering properties based on distance. This modular approach helped in designing a scalable and testable solution.
+
+2. What specific tools, libraries, or online resources did you use to develop your solution, and why did you choose them over other options?
+I used FastAPI for building a lightweight, fast API; geopy for geocoding and distance calculation; pandas for handling property data; and rapidfuzz for fuzzy string matching. These tools were chosen for their speed, simplicity, and community support, especially for tasks like geolocation and approximate string matching.
+
+3. Describe a key challenge you faced while solving this problem and how you arrived at the final solution?
+A key challenge was handling user queries with multiple keywords like “Solang valley” or typos like “bangalre.” Initially, geocoding failed on such noisy inputs. I resolved this by applying fuzzy matching to known property names and cleaning input text, ensuring that even slightly incorrect or extended inputs were interpreted correctly.
+
+4. If you had more time, what improvements or alternative approaches would you explore, and why do you think they might be valuable?
+With more time, I would implement location extraction using NLP to identify place names from longer queries (e.g., “find properties near Solang Valley”). I’d also consider caching geocoding results and using a spatial index like PostGIS for better performance. These changes would enhance scalability and response times for real-time usage.
+
