@@ -4,3 +4,4 @@
 - install all dependencies
 - run the server by -> vvicorn main:app --reload
 - for query run -> http://127.0.0.1:8000/nearest-property?location=Sissu
+- Emailed question answered in Q&A file
